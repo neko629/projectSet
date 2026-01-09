@@ -30,3 +30,8 @@ def pig_latin_formater(word: str) -> str:
         return vowels_begin_handler(word)
     else:
         return consonants_begin_handler(word)
+
+if __name__ == "__main__":
+    input_word = input("\nPlease input a word: ")
+    pig_latin_word = pig_latin_formater(input_word)
+    print(f"\nThe Pig Latin form of the word is: \033[91m{pig_latin_word}\033[0m\n")
