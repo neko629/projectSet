@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+lib/
+lib64/
+Python.h
+build/
+dist/
+develop-eggs/
+.eggs/
+*.egg-info/
+.env
+
+# IDEs and other tools
+.idea/
+.vscode/
+.DS_Store
+*.log
+*.sqlite3
+
+# Specific to this project (example, customize as needed)
+chapter1/__pycache__/
