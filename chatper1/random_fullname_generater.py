@@ -1,15 +1,6 @@
-# 定义一个姓的元组
+"""A script to generate random Chinese full names."""
 
-# 定义一个名的元组
-
-# 循环
-# 随机取一个姓
-# 随机取一个名
-# 组合成一个全名
-# 打印全名
-# 询问用户继续还是退出
-
-import sys,random
+import random
 
 family_name_set = (
     "王", "李", "张", "刘", "陈", "杨", "黄", "赵", "吴", "周",
@@ -23,14 +14,20 @@ first_name_set = (
     "伟", "芳", "娜", "敏", "静", "丽", "强", "磊", "军", "洋"
 )
 
-while True:
-    first_name = random.choice(first_name_set)
-    family_name = random.choice(family_name_set)
-    full_name = family_name +first_name
-    print(f"\n\n随机生成的姓名是: {full_name}\n\n", file = sys.stderr)
-    _continue = True if input("是否继续生成?(y/n)") == "y" else False
-    if _continue == False:
-        print(f"\n感谢您的使用, 再见!")
-        break
+def main():
+    """
+    main function to generate random Chinese full names.
+    :return: None
+    """
+    while True:
+        first_name = random.choice(first_name_set)
+        family_name = random.choice(family_name_set)
+        full_name = family_name + first_name
+        print(f"\n\n随机生成的姓名是: \033[91m{full_name}\033[0m\n\n")
+        _continue = input("是否继续生成?(y/n)").lower() == "y"
+        if not _continue:
+            print("\n感谢您的使用, 再见!")
+            break
 
-
+if __name__ == "__main__":
+    main()
